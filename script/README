@@ -1,0 +1,34 @@
+answer[x].txtに答えを書く
+export ANSWER="$HOME/script/c_answer"
+./c.sh
+source override_cd.sh
+答えを配置するdirをanswer_list[x]に書く
+python3 mywatch.py -p /home/vagrant/challenge/
+
+cd(相対パスで深い階層) pwd mkdir rm rmdir less cp mv find vim　まだ使ってない
+ls touch cat 使った
+
+.
+└── challenge
+    ├── unit1
+    │   └── answer1.txt
+    ├── unit2
+    │   └── answer2.txt
+    └── unit3
+
+challenge1 $HOME/challenge/unit1に移動してみよう
+```
+cd challenge
+cd unit1
+ls
+cat answer1.txt
+```
+
+challenge2 $HOME/challenge/unit2でanswer2.txtを作成してみよう
+```
+cd unit2
+touch answer2.txt
+cat answer2.txt
+```
+
+challenge3
