@@ -5,8 +5,8 @@ source override_cd.sh
 答えを配置するdirをanswer_list[x]に書く
 python3 mywatch.py -p /home/vagrant/challenge/
 
-cd(相対パスで深い階層) pwd mkdir rm rmdir less cp mv find vim　まだ使ってない
-ls touch cat 使った
+cd(相対パスで深い階層) mkdir rm rmdir less cp mv find vim　まだ使ってない
+ls touch cat pwd 使った
 
 .
 └── challenge
@@ -15,6 +15,18 @@ ls touch cat 使った
     ├── unit2
     │   └── answer2.txt
     └── unit3
+	├── en
+	│   ├── foo
+	│   │   └── bar
+	│   └── foobar
+	└── jp
+	    ├── fuga
+	    │   └── fugafuga
+	    ├── hoge
+	    │   └── hogehoge
+	    ├── hogera
+	    └── piyo
+	        └── piyopiyo
 
 challenge1 $HOME/challenge/unit1に移動してみよう
 ```
@@ -31,4 +43,10 @@ touch answer2.txt
 cat answer2.txt
 ```
 
-challenge3
+challenge3 $HOME/challenge/unit3からcd jp/hogera/../fuga/../../en/foo/barを実行してカレントディレクトリを絶対パスで答えて
+answerを直す todo
+```
+cd unit3
+cd jp/hogera/../fuga/../../en/foo/bar
+pwd
+```

@@ -9,7 +9,7 @@ from watchdog.observers import Observer
 
 base = os.environ['HOME'] + '/challenge'
 answer_dir = os.environ['ANSWER']
-answer_list = ["dummy","dummy","/unit2"]
+answer_list = ["dummy","dummy","/unit2", "dummy"]
 
 def save_answer(i):
     if i == 0 or i == 1:
