@@ -1,4 +1,4 @@
-for i in `seq 3`
+for i in `seq 5`
 do
     mkdir -p $HOME/challenge/unit$i
 done
@@ -11,3 +11,4 @@ mkdir -p $HOME/challenge/unit3/jp/hogera
 mkdir -p $HOME/challenge/unit3/en/foo/bar
 mkdir -p $HOME/challenge/unit3/en/foobar
 
+touch $HOME/challenge/unit4/answer4.txt.tmp

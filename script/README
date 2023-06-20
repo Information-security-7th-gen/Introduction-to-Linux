@@ -1,12 +1,15 @@
 answer[x].txtに答えを書く
 export ANSWER="$HOME/script/c_answer"
 ./c.sh
-source override_cd.sh
-答えを配置するdirをanswer_list[x]に書く
-python3 mywatch.py -p /home/vagrant/challenge/
+source override.sh
+unit3のために
+PS1='$'
 
-cd(相対パスで深い階層) mkdir rm rmdir less cp mv find vim　まだ使ってない
-ls touch cat pwd 使った
+答えを配置するdirをanswer_list[x]に書く
+python3 mywatch.py -p /home/vagrant/challenge/ これ使わないかも
+
+cd(相対パスで深い階層) vim less find　rm rmdir まだ使ってない
+ls touch cat pwd mkdir mv cp 使った
 
 .
 └── challenge
@@ -14,23 +17,32 @@ ls touch cat pwd 使った
     │   └── answer1.txt
     ├── unit2
     │   └── answer2.txt
-    └── unit3
-	├── en
-	│   ├── foo
-	│   │   └── bar
-	│   └── foobar
-	└── jp
-	    ├── fuga
-	    │   └── fugafuga
-	    ├── hoge
-	    │   └── hogehoge
-	    ├── hogera
-	    └── piyo
-	        └── piyopiyo
+    ├── unit3
+	│	├── en
+	│   │	├── foo
+	│   │	│	└── bar
+	│   │	│		└── answer3.txt
+	│   │	└── foobar
+	│	└── jp
+	│   	├── fuga
+	│   	│   └── fugafuga
+	│   	├── hoge
+	│		│   └── hogehoge
+	│    	├── hogera
+	│    	└── piyo
+	│    		└── piyopiyo
+	├── unit4
+	│	├── answer4.txt.tmp(moved)
+	│	└── answer4.txt
+	└── unit5
+		├── answer1.txt
+		├── answer2.txt
+		├── answer3.txt
+		├── answer4.txt
+		└── answer5.txt
 
 challenge1 $HOME/challenge/unit1に移動してみよう
 ```
-cd challenge
 cd unit1
 ls
 cat answer1.txt
@@ -43,10 +55,26 @@ touch answer2.txt
 cat answer2.txt
 ```
 
-challenge3 $HOME/challenge/unit3からcd jp/hogera/../fuga/../../en/foo/barを実行してカレントディレクトリを絶対パスで答えて
+challenge3 $HOME/challenge/unit3からcd jp/hogera/../fuga/../../en/foo/barを実行した後カレントディレクトリを確認して
 answerを直す todo
 ```
 cd unit3
 cd jp/hogera/../fuga/../../en/foo/bar
 pwd
+```
+
+challenge4 $HOME/challenge/unit4でanswer4.txt.tmpをanswer4.txtに変更する
+```
+cd unit4
+mv answer4.txt.tmp answer4.txt
+```
+
+challenge5 $HOME/challenge/unit5でanswerディレクトリを作ってanswer1.txt, answer2.txt, answer3.txt, answer4.txtを中に入れてanswer5.txtを作成
+```
+cd unit5
+cp ../unit1/answer1.txt ./
+cp ../unit2/answer2.txt ./
+cp ../unit3/en/foo/bar/answer3.txt ./
+cp ../unit4/answer4.txt
+touch answer5.txt
 ```
