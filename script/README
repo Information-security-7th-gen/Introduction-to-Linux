@@ -18,28 +18,28 @@ ls touch cat pwd mkdir mv cp 使った
     ├── unit2
     │   └── answer2.txt
     ├── unit3
-	│	├── en
-	│   │	├── foo
-	│   │	│	└── bar
-	│   │	│		└── answer3.txt
-	│   │	└── foobar
-	│	└── jp
-	│   	├── fuga
-	│   	│   └── fugafuga
-	│   	├── hoge
-	│		│   └── hogehoge
-	│    	├── hogera
-	│    	└── piyo
-	│    		└── piyopiyo
-	├── unit4
-	│	├── answer4.txt.tmp(moved)
-	│	└── answer4.txt
-	└── unit5
-		├── answer1.txt
-		├── answer2.txt
-		├── answer3.txt
-		├── answer4.txt
-		└── answer5.txt
+    │   ├── en
+    │   │   ├── foo
+    │   │   │   └── bar
+    │   │   │   └── answer3.txt
+    │   │   └── foobar
+    │   └── jp
+    │       ├── fuga
+    │       │   └── fugafuga
+    │       ├── hoge
+    │       │   └── hogehoge
+    │       ├── hogera
+    │       └── piyo
+    │           └── piyopiyo
+    ├── unit4
+    │   ├── answer4.txt.tmp(moved)
+    │   └── answer4.txt
+    └── unit5
+        ├── answer1.txt
+        ├── answer2.txt
+        ├── answer3.txt
+        ├── answer4.txt
+        └── answer5.txt
 
 challenge1 $HOME/challenge/unit1に移動してみよう
 ```
