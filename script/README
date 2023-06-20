@@ -61,12 +61,14 @@ answerを直す todo
 cd unit3
 cd jp/hogera/../fuga/../../en/foo/bar
 pwd
+cat answer3.txt
 ```
 
 challenge4 $HOME/challenge/unit4でanswer4.txt.tmpをanswer4.txtに変更する
 ```
 cd unit4
 mv answer4.txt.tmp answer4.txt
+cat answer4.txt
 ```
 
 challenge5 $HOME/challenge/unit5でanswerディレクトリを作ってanswer1.txt, answer2.txt, answer3.txt, answer4.txtを中に入れてanswer5.txtを作成
@@ -77,4 +79,5 @@ cp ../unit2/answer2.txt ./
 cp ../unit3/en/foo/bar/answer3.txt ./
 cp ../unit4/answer4.txt
 touch answer5.txt
+cat answer5.txt
 ```
