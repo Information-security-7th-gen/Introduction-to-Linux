@@ -8,7 +8,7 @@ PS1='$'
 答えを配置するdirをanswer_list[x]に書く
 python3 mywatch.py -p /home/vagrant/challenge/ これ使わないかも
 
-cd(相対パスで深い階層) vim less find　rm rmdir まだ使ってない
+cd(相対パスで深い階層) vim less find rm rmdir まだ使ってない
 ls touch cat pwd mkdir mv cp 使った
 
 .
@@ -41,22 +41,21 @@ ls touch cat pwd mkdir mv cp 使った
         ├── answer4.txt
         └── answer5.txt
 
-challenge1 $HOME/challenge/unit1に移動してみよう
+unit1 $HOME/challenge/unit1に移動してみよう
 ```
 cd unit1
 ls
 cat answer1.txt
 ```
 
-challenge2 $HOME/challenge/unit2でanswer2.txtを作成してみよう
+unit2 $HOME/challenge/unit2でanswer2.txtを作成してみよう
 ```
 cd unit2
 touch answer2.txt
 cat answer2.txt
 ```
 
-challenge3 $HOME/challenge/unit3からcd jp/hogera/../fuga/../../en/foo/barを実行した後カレントディレクトリを確認して
-answerを直す todo
+unit3 $HOME/challenge/unit3からcd jp/hogera/../fuga/../../en/foo/barを実行した後カレントディレクトリを確認して
 ```
 cd unit3
 cd jp/hogera/../fuga/../../en/foo/bar
@@ -64,20 +63,22 @@ pwd
 cat answer3.txt
 ```
 
-challenge4 $HOME/challenge/unit4でanswer4.txt.tmpをanswer4.txtに変更する
+unit4 $HOME/challenge/unit4でanswer4.txt.tmpをanswer4.txtに名前を変更しよう
 ```
 cd unit4
 mv answer4.txt.tmp answer4.txt
 cat answer4.txt
 ```
 
-challenge5 $HOME/challenge/unit5でanswerディレクトリを作ってanswer1.txt, answer2.txt, answer3.txt, answer4.txtを中に入れてanswer5.txtを作成
+unit5 $HOME/challenge/unit5でanswerディレクトリを作ってanswer1.txt, answer2.txt, answer3.txt, answer4.txtをanswerにコピーしてanswer5.txtを作成
 ```
 cd unit5
-cp ../unit1/answer1.txt ./
-cp ../unit2/answer2.txt ./
-cp ../unit3/en/foo/bar/answer3.txt ./
-cp ../unit4/answer4.txt
+mkdir answer
+cd answer
+cp ../../unit1/answer1.txt ./
+cp ../../unit2/answer2.txt ./
+cp ../../unit3/en/foo/bar/answer3.txt ./
+cp ../../unit4/answer4.txt
 touch answer5.txt
 cat answer5.txt
 ```

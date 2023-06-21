@@ -18,10 +18,10 @@ cd_override () {
 check_answer() {
 	for i in 1 2 3 4
 	do
-		if [ ! -e "$HOME/challenge/unit5/answer$i.txt" ]; then
+		if [ ! -e "$HOME/challenge/unit5/answer/answer$i.txt" ]; then
 			return 1
 		fi
-		if [ "`cat $ANSWER/answer$i.txt | base64 -d`" != "`cat $HOME/challenge/unit5/answer$i.txt`" ]; then
+		if [ "`cat $ANSWER/answer$i.txt | base64 -d`" != "`cat $HOME/challenge/unit5/answer/answer$i.txt`" ]; then
 			return 1
 		fi
 		if [ $i != 3 ];then
