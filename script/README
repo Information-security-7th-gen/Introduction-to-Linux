@@ -8,8 +8,8 @@ PS1='$'
 答えを配置するdirをanswer_list[x]に書く
 python3 mywatch.py -p /home/vagrant/challenge/ これ使わないかも
 
-cd(相対パスで深い階層) vim less find rm rmdir まだ使ってない
-ls touch cat pwd mkdir mv cp 使った
+cd(相対パスで深い階層) find rm rmdir まだ使ってない
+ls touch cat pwd mkdir mv cp vim less 使った
 
 .
 └── challenge
@@ -78,7 +78,26 @@ cd answer
 cp ../../unit1/answer1.txt ./
 cp ../../unit2/answer2.txt ./
 cp ../../unit3/en/foo/bar/answer3.txt ./
-cp ../../unit4/answer4.txt
+cp ../../unit4/answer4.txt ./
 touch answer5.txt
 cat answer5.txt
+```
+
+unit6 $HOME/challenge/unit6でテキストエディタを使ってdate.txtに今日の日付をyyyy/mm/dd形式で書いてみよう
+```
+cd unit6
+vim date.txt
+2023/08/05
+:wq
+cat answer6.txt
+```
+
+unit7 $HOME/challenge/unit7のcolors.txtからanswer7.txtのパスを探そう
+```
+cd unit7
+less colors.txt
+/unit
+q
+cd ../unit3/jp/fuga/fugafuga
+cat answer7.txt
 ```
