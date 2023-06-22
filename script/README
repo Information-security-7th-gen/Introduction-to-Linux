@@ -28,19 +28,24 @@ ls touch cat pwd mkdir mv cp vim less 使った
     │       │   └── fugafuga
     │       ├── hoge
     │       │   └── hogehoge
+    │       │       └── answer7.txt
     │       ├── hogera
     │       └── piyo
     │           └── piyopiyo
     ├── unit4
     │   ├── answer4.txt.tmp(moved)
     │   └── answer4.txt
-    └── unit5
-        ├── answer1.txt
-        ├── answer2.txt
-        ├── answer3.txt
-        ├── answer4.txt
-        └── answer5.txt
-
+    ├── unit5
+    │   ├── answer1.txt
+    │   ├── answer2.txt
+    │   ├── answer3.txt
+    │   ├── answer4.txt
+    │   └── answer5.txt
+    ├── unit6
+    │   ├── answer6.txt
+    │   └── date.txt
+    └── unit7
+        └── colors.txt
 unit1 $HOME/challenge/unit1に移動してみよう
 ```
 cd unit1
