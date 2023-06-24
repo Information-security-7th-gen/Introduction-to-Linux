@@ -5,11 +5,10 @@ source override.sh
 unit3のために
 PS1='$'
 
-答えを配置するdirをanswer_list[x]に書く
 python3 mywatch.py -p /home/vagrant/challenge/ これ使わないかも
 
-cd(相対パスで深い階層) find rm rmdir まだ使ってない
-ls touch cat pwd mkdir mv cp vim less 使った
+cd(相対パスで深い階層) rm rmdir まだ使ってない
+ls touch cat pwd mkdir mv cp vim less find 使った
 
 .
 └── challenge
@@ -44,8 +43,35 @@ ls touch cat pwd mkdir mv cp vim less 使った
     ├── unit6
     │   ├── answer6.txt
     │   └── date.txt
-    └── unit7
-        └── colors.txt
+    ├── unit7
+    │   └── colors.txt
+    └── unit 8
+        ├── 2021
+        │   ├── 1
+        │   │   ├── 1
+        │   │   ├── 2
+        │   │   .
+        │   │   .
+        │   │   .
+        │   │   ├── 30
+        │   │   └── 31
+        │   ├── 2
+        │   .
+        │   .
+        │   .
+        │   ├── 11
+        │   └── 12
+        ├── 2022
+        │   └── same
+        ├── 2023
+        │   ├── same
+        │   └── 8
+        │       ├── same
+        │       └── 5
+        │           └── answer8.txt
+        └── 2024
+            └── same
+
 unit1 $HOME/challenge/unit1に移動してみよう
 ```
 cd unit1
@@ -105,4 +131,11 @@ less colors.txt
 q
 cd ../unit3/jp/fuga/fugafuga
 cat answer7.txt
+```
+unit8 answer8.txtを探して
+```
+cd unit8
+find -name answer8.txt
+cd 2023/8/5
+cat answer8.txt
 ```
