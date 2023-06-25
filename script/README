@@ -8,7 +8,7 @@ PS1='$'
 python3 mywatch.py -p /home/vagrant/challenge/ これ使わないかも
 
 cd(相対パスで深い階層) rm rmdir まだ使ってない
-ls touch cat pwd mkdir mv cp vim less find 使った
+ls touch cat pwd mkdir mv cp vim less find rm 使った
 
 .
 └── challenge
@@ -45,32 +45,34 @@ ls touch cat pwd mkdir mv cp vim less find 使った
     │   └── date.txt
     ├── unit7
     │   └── colors.txt
-    └── unit 8
-        ├── 2021
-        │   ├── 1
-        │   │   ├── 1
-        │   │   ├── 2
-        │   │   .
-        │   │   .
-        │   │   .
-        │   │   ├── 30
-        │   │   └── 31
-        │   ├── 2
-        │   .
-        │   .
-        │   .
-        │   ├── 11
-        │   └── 12
-        ├── 2022
-        │   └── same
-        ├── 2023
-        │   ├── same
-        │   └── 8
-        │       ├── same
-        │       └── 5
-        │           └── answer8.txt
-        └── 2024
-            └── same
+    ├── unit 8
+    │   ├── 2021
+    │   │   ├── 1
+    │   │   │   ├── 1
+    │   │   │   ├── 2
+    │   │   │   .
+    │   │   │   .
+    │   │   │   .
+    │   │   │   ├── 30
+    │   │   │   └── 31
+    │   │   ├── 2
+    │   │   .
+    │   │   .
+    │   │   .
+    │   │   ├── 11
+    │   │   └── 12
+    │   ├── 2022
+    │   │   └── same
+    │   ├── 2023
+    │   │   ├── same
+    │   │   └── 8
+    │   │       ├── same
+    │   │       └── 5
+    │   │           └── answer8.txt
+    │   └── 2024
+    │       └── same
+    └── unit9
+        └── answer9.txt
 
 unit1 $HOME/challenge/unit1に移動してみよう
 ```
@@ -138,4 +140,11 @@ cd unit8
 find -name answer8.txt
 cd 2023/8/5
 cat answer8.txt
+```
+
+unit0 answer9.txtを消そう
+```
+cd unit9
+rm answer9.txt
+cat answer9.txt
 ```

@@ -111,7 +111,7 @@ mv_override () {
 
 vim_override () {
 	pwd=`\pwd`
-	vim $@
+	\vim $@
 	if [ $pwd = "$HOME/challenge/unit6" ];then
 		if [ "`echo $@ | grep 'date.txt'`" ]; then
 			if [ -e "date.txt" ]; then
@@ -132,8 +132,20 @@ vim_override () {
 	fi
 }
 
+rm_override () {
+	pwd=`\pwd`
+	\rm $@
+	if [ $pwd = "$HOME/challenge/unit9" ];then
+		if [ "echo $@ | grep 'answer9.txt'" ]; then
+			cat $ANSWER/answer9.txt | base64 -d > answer9.txt
+			echo -e "\n 本当のanswer9.txtを作成しました\n"
+		fi
+	fi
+}
+
 alias touch="touch_override"
 alias cd="cd_override"
 alias pwd="pwd_override"
 alias mv="mv_override"
 alias vim="vim_override"
+alias rm="rm_override"
