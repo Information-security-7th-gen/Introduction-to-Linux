@@ -63,14 +63,14 @@ touch_override () {
 	\touch $@
 	pwd=`\pwd`
 	\touch $@
-	if [ "`echo $@ | grep 'answer2.txt'`" ]; then
+	if [ -e "answer2.txt" ]; then
 		if [ $pwd = "$HOME/challenge/unit2" ]; then
 			if [ "`cat $ANSWER/answer2.txt | base64 -d`" != "`cat answer2.txt`" ]; then
 				cat $ANSWER/answer2.txt | base64 -d > answer2.txt
 				echo -e '\n answer2.txtに何か書かれたような...\n'
 			fi
 		fi
-	elif [ "`echo $@ | grep 'answer5.txt'`" ]; then
+	elif [ -e "answer5.txt" ]; then
 		if [ $pwd = "$HOME/challenge/unit5" ]; then
 			check_answer
 			r=$?
@@ -86,7 +86,7 @@ pwd_override () {
 	pwd=`\pwd $@`
 	echo $pwd  
 	if [ $pwd = "$HOME/challenge/unit3/en/foo/bar" ]; then
-		if [ -e answer3.txt ]; then
+		if [ -e "answer3.txt" ]; then
 			if [ "`cat $ANSWER/answer3.txt | base64 -d`" != "`cat answer3.txt`" ]; then
 				cat $ANSWER/answer3.txt | base64 -d > answer3.txt
 				echo -e '\n answer3.txtが作成されました\n'
@@ -113,18 +113,15 @@ vim_override () {
 	pwd=`\pwd`
 	\vim $@
 	if [ $pwd = "$HOME/challenge/unit6" ];then
-		if [ "`echo $@ | grep 'date.txt'`" ]; then
-			if [ -e "date.txt" ]; then
-				if [ "`cat date.txt`" = "2023/08/05" ];then
-					if [ ! -e "answer6.txt" ]; then
+		if [ -e "date.txt" ]; then
+			if [ "`cat date.txt`" = "2023/08/05" ];then
+				if [ ! -e "answer6.txt" ]; then
+					cat $ANSWER/answer6.txt | base64 -d > answer6.txt
+					echo -e "\n answer6.txtが作成されました\n"
+				else 
+					if [ "`cat $ANSWER/answer6.txt | base64 -d`" != "`cat answer6.txt`" ]; then
 						cat $ANSWER/answer6.txt | base64 -d > answer6.txt
 						echo -e "\n answer6.txtが作成されました\n"
-					else 
-						if [ "`cat $ANSWER/answer6.txt | base64 -d`" != "`cat answer6.txt`" ]; then
-							cat $ANSWER/answer6.txt | base64 -d > answer6.txt
-							echo -e "\n answer6.txtが作成されました\n"
-						fi
-
 					fi
 				fi
 			fi
@@ -136,9 +133,27 @@ rm_override () {
 	pwd=`\pwd`
 	\rm $@
 	if [ $pwd = "$HOME/challenge/unit9" ];then
-		if [ "echo $@ | grep 'answer9.txt'" ]; then
+		if [ "`echo $@ | grep 'answer9.txt'`" ]; then
 			cat $ANSWER/answer9.txt | base64 -d > answer9.txt
 			echo -e "\n 本当のanswer9.txtを作成しました\n"
+		fi
+	fi
+}
+
+rmdir_override () {
+	pwd=`\pwd`
+	\rmdir $@
+	if [ $pwd = "$HOME/challenge/unit10" ]; then
+		if [ ! -e "tmp" ]; then
+			if [ ! -e "answer10.txt" ];then 
+				cat $ANSWER/answer10.txt | base64 -d > answer10.txt
+				echo -e "\n answer6.txtが作成されました\n"
+			else
+				if [ "`cat $ANSWER/answer10.txt | base64 -d`" != "`cat answer10.txt`" ]; then
+					cat $ANSWER/answer10.txt | base64 -d > answer10.txt
+					echo -e "\n answer6.txtが作成されました\n"
+				fi
+			fi
 		fi
 	fi
 }
@@ -149,3 +164,4 @@ alias pwd="pwd_override"
 alias mv="mv_override"
 alias vim="vim_override"
 alias rm="rm_override"
+alias rmdir="rmdir_override"

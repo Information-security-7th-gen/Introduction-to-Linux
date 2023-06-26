@@ -1,4 +1,4 @@
-for i in `seq 9`
+for i in `seq 10`
 do
     mkdir -p $HOME/challenge/unit$i
 done
@@ -48,3 +48,10 @@ mkdir -p $HOME/challenge/unit8/2024/2/29
 cp ./answer/answer8.txt $HOME/challenge/unit8/2023/8/5/answer8.txt
 
 cp ./fake_answer9.txt $HOME/challenge/unit9/answer9.txt
+
+mkdir $HOME/challenge/unit10/tmp
+
+for i in `seq 10`
+do
+	touch $HOME/challenge/unit10/tmp/yqewfh$i.tmp
+done
