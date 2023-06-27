@@ -1,4 +1,4 @@
-for i in `seq 10`
+for i in `seq 11`
 do
     mkdir -p $HOME/challenge/unit$i
 done
@@ -55,3 +55,5 @@ for i in `seq 10`
 do
 	touch $HOME/challenge/unit10/tmp/yqewfh$i.tmp
 done
+
+mkdir $HOME/challenge/unit11/answer

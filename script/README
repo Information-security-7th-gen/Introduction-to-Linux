@@ -7,8 +7,7 @@ PS1='$'
 
 python3 mywatch.py -p /home/vagrant/challenge/ これ使わないかも
 
-cd(相対パスで深い階層) まだ使ってない
-ls touch cat pwd mkdir mv cp vim less find rm rmdir 使った
+cd ls touch cat pwd mkdir mv cp vim less find rm rmdir
 
 .
 └── challenge
@@ -45,7 +44,7 @@ ls touch cat pwd mkdir mv cp vim less find rm rmdir 使った
     │   └── date.txt
     ├── unit7
     │   └── colors.txt
-    ├── unit 8
+    ├── unit8
     │   ├── 2021
     │   │   ├── 1
     │   │   │   ├── 1
@@ -71,8 +70,11 @@ ls touch cat pwd mkdir mv cp vim less find rm rmdir 使った
     │   │           └── answer8.txt
     │   └── 2024
     │       └── same
-    └── unit9
-        └── answer9.txt
+    ├── unit9
+    │   └── answer9.txt
+    └── unit10
+        └── 
+
 
 unit1 $HOME/challenge/unit1に移動してみよう
 ```
@@ -155,4 +157,11 @@ cd unit10
 rm tmp/*tmp
 rmdir tmp
 cat answer10.txt
+```
+
+unit11 $HOME/challenge/unit8/2022/7/2から相対パスで$HOME/challenge/unit11/answerに移動しよう
+```
+cd unit8/2022/7/2
+cd ../../../../unit11/answer
+cat answer11.txt
 ```

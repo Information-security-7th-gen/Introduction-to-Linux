@@ -4,26 +4,33 @@ cd_override () {
 		\cd
 	else
 		\cd $@
-		if [ $1 = "unit1/" -o $1 = "unit1" ]; then
-			if [ $pwd = "$HOME/challenge" ]; then
-				if [ ! -e "answer1.txt" ]; then
+		pwda=`\pwd`
+		if [ $pwda = "$HOME/challenge/unit1" -a $pwd = "$HOME/challenge" ]; then
+			if [ ! -e "answer1.txt" ]; then
+				cat $ANSWER/answer1.txt | base64 -d > answer1.txt
+				echo -e '\n answer1.txtが作成されました\n'
+			else
+				if [ "`cat $ANSWER/answer1.txt`" != "`cat answer1.txt`" ]; then
 					cat $ANSWER/answer1.txt | base64 -d > answer1.txt
 					echo -e '\n answer1.txtが作成されました\n'
-				else
-					if [ "`cat $ANSWER/answer1.txt`" != "`cat answer1.txt`" ]; then
-						cat $ANSWER/answer1.txt | base64 -d > answer1.txt
-						echo -e '\n answer1.txtが作成されました\n'
-					fi
 				fi
 			fi
-		elif [ $1 = "unit7/" -o $1 = "unit7" ]; then
-			if [ $pwd = "$HOME/challenge" ]; then
-				if [ ! -e "$HOME/challenge/unit3/jp/hoge/hogehoge/answer7.txt" ]; then
+		elif [ $pwda = "$HOME/challenge/unit7" -a $pwd = "$HOME/challenge" ]; then
+			if [ ! -e "$HOME/challenge/unit3/jp/hoge/hogehoge/answer7.txt" ]; then
+				cat $ANSWER/answer7.txt | base64 -d > $HOME/challenge/unit3/jp/hoge/hogehoge/answer7.txt
+			else
+				if [ "`cat $ANSWER/answer7.txt`" != "`cat $HOME/challenge/unit3/jp/hoge/hogehoge/answer7.txt`" ]; then
 					cat $ANSWER/answer7.txt | base64 -d > $HOME/challenge/unit3/jp/hoge/hogehoge/answer7.txt
-				else
-					if [ "`cat $ANSWER/answer7.txt`" != "`cat $HOME/challenge/unit3/jp/hoge/hogehoge/answer7.txt`" ]; then
-						cat $ANSWER/answer7.txt | base64 -d > $HOME/challenge/unit3/jp/hoge/hogehoge/answer7.txt
-					fi
+				fi
+			fi
+		elif [ $pwda = "$HOME/challenge/unit11/answer" -a $pwd = "$HOME/challenge/unot8/2022/7/2" ]; then
+			if [ ! -e "answer11.txt" ]; then
+				cat $ANSWER/answer11.txt | base64 -d > answer11.txt
+				echo -e '\n answer11.txtが作成されました\n'
+			else
+				if [ "`cat $ANSWER/answer11.txt`" != "`cat answer11.txt`" ]; then
+					cat $ANSWER/answer11.txt | base64 -d > answer11.txt
+					echo -e '\n answer1.txtが作成されました\n'
 				fi
 			fi
 		fi
