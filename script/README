@@ -1,15 +1,15 @@
-answer[x].txtに答えを書く
+answer/answer[x].txtに答えを書く
 export ANSWER="$HOME/script/c_answer"
 ./c.sh
 source override.sh
 unit3のために
-PS1='$'
+PS1='$ '
 
 python3 mywatch.py -p /home/vagrant/challenge/ これ使わないかも
 
 cd ls touch cat pwd mkdir mv cp vim less find rm rmdir
 
-.
+$HOME
 └── challenge
     ├── unit1
     │   └── answer1.txt
@@ -72,9 +72,24 @@ cd ls touch cat pwd mkdir mv cp vim less find rm rmdir
     │       └── same
     ├── unit9
     │   └── answer9.txt
-    └── unit10
-        └── 
-
+    ├── unit10
+    │   ├── tmp
+    │   │   ├── yqewfh1.tmp
+    │   │   ├── yqewfh10.tmp
+    │   │   ├── yqewfh2.tmp
+    │   │   ├── yqewfh3.tmp
+    │   │   ├── yqewfh4.tmp
+    │   │   ├── yqewfh5.tmp
+    │   │   ├── yqewfh6.tmp
+    │   │   ├── yqewfh7.tmp
+    │   │   ├── yqewfh8.tmp
+    │   │   └── yqewfh9.tmp
+    │   └── answer10.txt
+    ├── unit11
+    │   └── answer
+    │       └── answer11.txt
+    └── unit12
+        └── answer12.txt
 
 unit1 $HOME/challenge/unit1に移動してみよう
 ```
@@ -87,6 +102,7 @@ unit2 $HOME/challenge/unit2でanswer2.txtを作成してみよう
 ```
 cd unit2
 touch answer2.txt
+ls
 cat answer2.txt
 ```
 
@@ -95,6 +111,7 @@ unit3 $HOME/challenge/unit3からcd jp/hogera/../fuga/../../en/foo/barを実行�
 cd unit3
 cd jp/hogera/../fuga/../../en/foo/bar
 pwd
+ls
 cat answer3.txt
 ```
 
@@ -102,6 +119,7 @@ unit4 $HOME/challenge/unit4でanswer4.txt.tmpをanswer4.txtに名前を変更し
 ```
 cd unit4
 mv answer4.txt.tmp answer4.txt
+ls
 cat answer4.txt
 ```
 
@@ -115,6 +133,7 @@ cp ../../unit2/answer2.txt ./
 cp ../../unit3/en/foo/bar/answer3.txt ./
 cp ../../unit4/answer4.txt ./
 touch answer5.txt
+ls
 cat answer5.txt
 ```
 
@@ -124,6 +143,7 @@ cd unit6
 vim date.txt
 2023/08/05
 :wq
+ls
 cat answer6.txt
 ```
 
@@ -134,13 +154,16 @@ less colors.txt
 /unit
 q
 cd ../unit3/jp/fuga/fugafuga
+ls
 cat answer7.txt
 ```
+
 unit8 answer8.txtを探して
 ```
 cd unit8
 find -name answer8.txt
 cd 2023/8/5
+ls
 cat answer8.txt
 ```
 
@@ -148,6 +171,7 @@ unit9 answer9.txtを消そう
 ```
 cd unit9
 rm answer9.txt
+ls
 cat answer9.txt
 ```
 
@@ -156,6 +180,7 @@ unit10 $HOME/challenge/unit10/tmp/*.tmpを消してtmpを消す
 cd unit10
 rm tmp/*tmp
 rmdir tmp
+ls
 cat answer10.txt
 ```
 
@@ -163,5 +188,14 @@ unit11 $HOME/challenge/unit8/2022/7/2から相対パスで$HOME/challenge/unit11
 ```
 cd unit8/2022/7/2
 cd ../../../../unit11/answer
+ls 
 cat answer11.txt
+```
+
+unit12
+```
+cd unit12
+ls
+cat answer12.txt
+sudo cat asnwer12.txt
 ```

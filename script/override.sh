@@ -154,11 +154,11 @@ rmdir_override () {
 		if [ ! -e "tmp" ]; then
 			if [ ! -e "answer10.txt" ];then 
 				cat $ANSWER/answer10.txt | base64 -d > answer10.txt
-				echo -e "\n answer6.txtが作成されました\n"
+				echo -e "\n answer10.txtが作成されました\n"
 			else
 				if [ "`cat $ANSWER/answer10.txt | base64 -d`" != "`cat answer10.txt`" ]; then
 					cat $ANSWER/answer10.txt | base64 -d > answer10.txt
-					echo -e "\n answer6.txtが作成されました\n"
+					echo -e "\n answer10.txtが作成されました\n"
 				fi
 			fi
 		fi
