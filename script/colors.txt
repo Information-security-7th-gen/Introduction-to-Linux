@@ -92,7 +92,7 @@ myrtle
 navajo-white
 navy-blue
 ochre
-challenge/unit3/jp/hoge/hogehoge
+challenge/unit3/jp/hoge/hogehoge/answer7.txt
 office-green
 olive
 olivine

@@ -1,13 +1,6 @@
 answer/answer[x].txtに答えを書く
-export ANSWER="$HOME/script/c_answer"
-./c.sh
-source override.sh
-unit3のために
-PS1='$ '
 
-python3 mywatch.py -p /home/vagrant/challenge/ これ使わないかも
-
-cd ls touch cat pwd mkdir mv cp vim less find rm rmdir
+cd ls touch cat pwd mkdir mv cp vim less find rm rmdir sudo
 
 $HOME
 └── challenge
@@ -34,11 +27,12 @@ $HOME
     │   ├── answer4.txt.tmp(moved)
     │   └── answer4.txt
     ├── unit5
-    │   ├── answer1.txt
-    │   ├── answer2.txt
-    │   ├── answer3.txt
-    │   ├── answer4.txt
-    │   └── answer5.txt
+    │   └── answer
+    │       ├── answer1.txt
+    │       ├── answer2.txt
+    │       ├── answer3.txt
+    │       ├── answer4.txt
+    │       └── answer5.txt
     ├── unit6
     │   ├── answer6.txt
     │   └── date.txt
@@ -88,8 +82,11 @@ $HOME
     ├── unit11
     │   └── answer
     │       └── answer11.txt
-    └── unit12
-        └── answer12.txt
+    ├── unit12
+    │   └── answer12.txt
+    └── unit13
+        ├── hint.txt
+        └── answer13.txt
 
 unit1 $HOME/challenge/unit1に移動してみよう
 ```
@@ -137,7 +134,7 @@ ls
 cat answer5.txt
 ```
 
-unit6 $HOME/challenge/unit6でテキストエディタを使ってdate.txtに今日の日付をyyyy/mm/dd形式で書いてみよう
+unit6 $HOME/challenge/unit6でテキストエディタを使ってdate.txtに今日の日付をYYYY/MM/DD形式で書いてみよう
 ```
 cd unit6
 vim date.txt
@@ -153,7 +150,7 @@ cd unit7
 less colors.txt
 /unit
 q
-cd ../unit3/jp/fuga/fugafuga
+cd ../unit3/jp/hoge/hogehoge
 ls
 cat answer7.txt
 ```
@@ -192,10 +189,19 @@ ls
 cat answer11.txt
 ```
 
-unit12
+unit12 $HOME/challenge/unit12/answer12.txtを開こう
 ```
 cd unit12
 ls
 cat answer12.txt
 sudo cat asnwer12.txt
+```
+
+unit13 $HOME/challenge/unit13/answer13.txtのタイムスタンプを2023/8/4 14:00:00に変更してみよう
+```
+cd unit13
+ls
+cat hint.txt
+touch -t 202308041400.00 answer13.txt
+cat answer13.txt
 ```

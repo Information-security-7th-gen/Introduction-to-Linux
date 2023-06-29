@@ -1,3 +1,6 @@
+export PS1="$ "
+export ANSWER="/.cst/c_answer"
+
 cd_override () {
 	pwd=`\pwd`
 	if [ $# = 0 ]; then
@@ -23,7 +26,7 @@ cd_override () {
 					cat $ANSWER/answer7.txt | base64 -d > $HOME/challenge/unit3/jp/hoge/hogehoge/answer7.txt
 				fi
 			fi
-		elif [ $pwda = "$HOME/challenge/unit11/answer" -a $pwd = "$HOME/challenge/unot8/2022/7/2" ]; then
+		elif [ $pwda = "$HOME/challenge/unit11/answer" -a $pwd = "$HOME/challenge/unit8/2022/7/2" ]; then
 			if [ ! -e "answer11.txt" ]; then
 				cat $ANSWER/answer11.txt | base64 -d > answer11.txt
 				echo -e '\n answer11.txtが作成されました\n'
@@ -67,7 +70,6 @@ check_answer() {
 
 
 touch_override () {
-	\touch $@
 	pwd=`\pwd`
 	\touch $@
 	if [ -e "answer2.txt" ]; then
@@ -77,13 +79,24 @@ touch_override () {
 				echo -e '\n answer2.txtに何か書かれたような...\n'
 			fi
 		fi
-	elif [ -e "answer5.txt" ]; then
-		if [ $pwd = "$HOME/challenge/unit5" ]; then
+	fi
+	if [ -e "answer5.txt" ]; then
+		if [ $pwd = "$HOME/challenge/unit5/answer" ]; then
 			check_answer
 			r=$?
 			if [ "`cat $ANSWER/answer5.txt | base64 -d`" != "`cat answer5.txt`" -a $r = 0 ]; then
 				cat $ANSWER/answer5.txt | base64 -d > answer5.txt
 				echo -e '\n answer5.txtに何か書かれたような...\n'
+			fi
+		fi
+	fi
+	if [ -e "answer13.txt" ];then
+		if [ $pwd = "$HOME/challenge/unit13" ];then
+			if [ "`stat answer13.txt | grep Modify | cut -d " " -f 2-3 | cut -d . -f 1`" = "2023-08-04 14:00:00" ];then
+				if [ "`cat $ANSWER/answer13.txt | base64 -d`" != "`cat answer13.txt`" ]; then
+					cat $ANSWER/answer13.txt | base64 -d > answer13.txt
+					echo -e '\n answer13.txtに何か書かれたような...\n'
+				fi
 			fi
 		fi
 	fi
