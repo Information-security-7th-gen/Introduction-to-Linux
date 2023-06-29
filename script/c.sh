@@ -1,10 +1,11 @@
 #!/bin/sh
 
-dir_path="$HOME/script/answer/*"
-dirs=`find $dir_path -maxdepth 0 -type f -name "*.txt"`
+script_dir="$HOME/Introduction-to-Linux/script"
+dir_path="$script_dir/answer/"
+files=`find ${dir_path}* -maxdepth 0 -type f -name "*.txt" | rev | cut -d / -f 1 | rev`
 
-for dir in $dirs;
+mkdir $script_dir/c_answer
+for file in $files;
 do
-    d=`echo $dir | cut -d / -f 5-`
-    cat $dir | base64 > $HOME/script/c_$d
+    cat ${dir_path}${file} | base64 > $script_dir/c_answer/$file
 done
