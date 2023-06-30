@@ -33,7 +33,17 @@ cd_override () {
 			else
 				if [ "`cat $ANSWER/answer11.txt`" != "`cat answer11.txt`" ]; then
 					cat $ANSWER/answer11.txt | base64 -d > answer11.txt
-					echo -e '\n answer1.txtが作成されました\n'
+					echo -e '\n answer11.txtが作成されました\n'
+				fi
+			fi
+		elif [ $pwda = "$HOME/challenge/unit5/answer" -a $pwd = "$HOME/challenge/unit5" ]; then
+			if [ ! -e "answer5.txt" ]; then
+				cat $ANSWER/answer5.txt | base64 -d > answer5.txt
+				echo -e '\n answer5.txtが作成されました\n'
+			else
+				if [ "`cat $ANSWER/answer5.txt`" != "`cat answer5.txt`" ]; then
+					cat $ANSWER/answer5.txt | base64 -d > answer5.txt
+					echo -e '\n answer5.txtが作成されました\n'
 				fi
 			fi
 		fi
@@ -43,10 +53,10 @@ cd_override () {
 check_answer() {
 	for i in 1 2 3 4
 	do
-		if [ ! -e "$HOME/challenge/unit5/answer/answer$i.txt" ]; then
+		if [ ! -e "$HOME/challenge/unit14/answer/answer$i.txt" ]; then
 			return 1
 		fi
-		if [ "`cat $ANSWER/answer$i.txt | base64 -d`" != "`cat $HOME/challenge/unit5/answer/answer$i.txt`" ]; then
+		if [ "`cat $ANSWER/answer$i.txt | base64 -d`" != "`cat $HOME/challenge/unit14/answer/answer$i.txt`" ]; then
 			return 1
 		fi
 		if [ $i != 3 ];then
@@ -80,13 +90,13 @@ touch_override () {
 			fi
 		fi
 	fi
-	if [ -e "answer5.txt" ]; then
-		if [ $pwd = "$HOME/challenge/unit5/answer" ]; then
+	if [ -e "answer14.txt" ]; then
+		if [ $pwd = "$HOME/challenge/unit14/answer" ]; then
 			check_answer
 			r=$?
-			if [ "`cat $ANSWER/answer5.txt | base64 -d`" != "`cat answer5.txt`" -a $r = 0 ]; then
-				cat $ANSWER/answer5.txt | base64 -d > answer5.txt
-				echo -e '\n answer5.txtに何か書かれたような...\n'
+			if [ "`cat $ANSWER/answer14.txt | base64 -d`" != "`cat answer14.txt`" -a $r = 0 ]; then
+				cat $ANSWER/answer14.txt | base64 -d > answer14.txt
+				echo -e '\n answer14.txtに何か書かれたような...\n'
 			fi
 		fi
 	fi

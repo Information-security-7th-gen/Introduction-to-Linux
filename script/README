@@ -28,10 +28,6 @@ $HOME
     │   └── answer4.txt
     ├── unit5
     │   └── answer
-    │       ├── answer1.txt
-    │       ├── answer2.txt
-    │       ├── answer3.txt
-    │       ├── answer4.txt
     │       └── answer5.txt
     ├── unit6
     │   ├── answer6.txt
@@ -84,9 +80,16 @@ $HOME
     │       └── answer11.txt
     ├── unit12
     │   └── answer12.txt
-    └── unit13
-        ├── hint.txt
-        └── answer13.txt
+    ├── unit13
+    │   ├── hint.txt
+    │   └── answer13.txt
+    └── unit14
+        └── answer
+            ├── answer1.txt
+            ├── answer2.txt
+            ├── answer3.txt
+            ├── answer4.txt
+            └── answer14.txt
 
 unit1 $HOME/challenge/unit1に移動してみよう
 ```
@@ -99,7 +102,6 @@ unit2 $HOME/challenge/unit2でanswer2.txtを作成してみよう
 ```
 cd unit2
 touch answer2.txt
-ls
 cat answer2.txt
 ```
 
@@ -116,20 +118,14 @@ unit4 $HOME/challenge/unit4でanswer4.txt.tmpをanswer4.txtに名前を変更し
 ```
 cd unit4
 mv answer4.txt.tmp answer4.txt
-ls
 cat answer4.txt
 ```
 
-unit5 $HOME/challenge/unit5でanswerディレクトリを作ってanswer1.txt, answer2.txt, answer3.txt, answer4.txtをanswerにコピーしてanswer5.txtを作成
+unit5 $HOME/challenge/unit5でanswerディレクトリを作成しよう
 ```
 cd unit5
 mkdir answer
 cd answer
-cp ../../unit1/answer1.txt ./
-cp ../../unit2/answer2.txt ./
-cp ../../unit3/en/foo/bar/answer3.txt ./
-cp ../../unit4/answer4.txt ./
-touch answer5.txt
 ls
 cat answer5.txt
 ```
@@ -204,4 +200,17 @@ ls
 cat hint.txt
 touch -t 202308041400.00 answer13.txt
 cat answer13.txt
+```
+
+unit14 $HOME/challenge/unit14でanswerディレクトリを作ってanswer1.txt, answer2.txt, answer3.txt, answer4.txtをanswerにコピーしてanswer14.txtを作成
+```
+cd unit14
+mkdir answer
+cd answer
+cp ../../unit1/answer1.txt ./
+cp ../../unit2/answer2.txt ./
+cp ../../unit3/en/foo/bar/answer3.txt ./
+cp ../../unit4/answer4.txt ./
+touch answer14.txt
+cat answer14.txt
 ```
