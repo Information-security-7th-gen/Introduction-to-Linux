@@ -8,7 +8,7 @@ cd_override () {
 	else
 		\cd $@
 		pwda=`\pwd`
-		if [ $pwda = "$HOME/challenge/unit1" -a $pwd = "$HOME/challenge" ]; then
+		if [ $pwda = "$HOME/challenge/unit1" ]; then
 			if [ ! -e "answer1.txt" ]; then
 				cat $ANSWER/answer1.txt | base64 -d > answer1.txt
 				echo -e '\n answer1.txtが作成されました\n'
@@ -18,7 +18,7 @@ cd_override () {
 					echo -e '\n answer1.txtが作成されました\n'
 				fi
 			fi
-		elif [ $pwda = "$HOME/challenge/unit7" -a $pwd = "$HOME/challenge" ]; then
+		elif [ $pwda = "$HOME/challenge/unit7" ]; then
 			if [ ! -e "$HOME/challenge/unit3/jp/hoge/hogehoge/answer7.txt" ]; then
 				cat $ANSWER/answer7.txt | base64 -d > $HOME/challenge/unit3/jp/hoge/hogehoge/answer7.txt
 			else
@@ -36,7 +36,7 @@ cd_override () {
 					echo -e '\n answer11.txtが作成されました\n'
 				fi
 			fi
-		elif [ $pwda = "$HOME/challenge/unit5/answer" -a $pwd = "$HOME/challenge/unit5" ]; then
+		elif [ $pwda = "$HOME/challenge/unit5/answer" ]; then
 			if [ ! -e "answer5.txt" ]; then
 				cat $ANSWER/answer5.txt | base64 -d > answer5.txt
 				echo -e '\n answer5.txtが作成されました\n'
@@ -157,6 +157,42 @@ vim_override () {
 			fi
 		fi
 	fi
+	if [ -e "answer2.txt" ]; then
+		if [ $pwd = "$HOME/challenge/unit2" ]; then
+			if [ "`cat $ANSWER/answer2.txt | base64 -d`" != "`cat answer2.txt`" ]; then
+				cat $ANSWER/answer2.txt | base64 -d > answer2.txt
+				echo -e '\n answer2.txtに何か書かれたような...\n'
+			fi
+		fi
+	fi
+}
+
+nano_override () {
+	pwd=`\pwd`
+	\nano $@
+	if [ $pwd = "$HOME/challenge/unit6" ];then
+		if [ -e "date.txt" ]; then
+			if [ "`cat date.txt`" = "2023/08/05" ];then
+				if [ ! -e "answer6.txt" ]; then
+					cat $ANSWER/answer6.txt | base64 -d > answer6.txt
+					echo -e "\n answer6.txtが作成されました\n"
+				else 
+					if [ "`cat $ANSWER/answer6.txt | base64 -d`" != "`cat answer6.txt`" ]; then
+						cat $ANSWER/answer6.txt | base64 -d > answer6.txt
+						echo -e "\n answer6.txtが作成されました\n"
+					fi
+				fi
+			fi
+		fi
+	fi
+	if [ -e "answer2.txt" ]; then
+		if [ $pwd = "$HOME/challenge/unit2" ]; then
+			if [ "`cat $ANSWER/answer2.txt | base64 -d`" != "`cat answer2.txt`" ]; then
+				cat $ANSWER/answer2.txt | base64 -d > answer2.txt
+				echo -e '\n answer2.txtに何か書かれたような...\n'
+			fi
+		fi
+	fi
 }
 
 rm_override () {
@@ -193,5 +229,6 @@ alias cd="cd_override"
 alias pwd="pwd_override"
 alias mv="mv_override"
 alias vim="vim_override"
+alias nano="nano_override"
 alias rm="rm_override"
 alias rmdir="rmdir_override"
