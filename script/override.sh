@@ -13,7 +13,7 @@ cd_override () {
 				cat $ANSWER/answer1.txt | base64 -d > answer1.txt
 				echo -e '\n answer1.txtが作成されました\n'
 			else
-				if [ "`cat $ANSWER/answer1.txt`" != "`cat answer1.txt`" ]; then
+				if [ "`cat $ANSWER/answer1.txt | base64 -d`" != "`cat answer1.txt`" ]; then
 					cat $ANSWER/answer1.txt | base64 -d > answer1.txt
 					echo -e '\n answer1.txtが作成されました\n'
 				fi
@@ -22,7 +22,7 @@ cd_override () {
 			if [ ! -e "$HOME/challenge/unit3/jp/hoge/hogehoge/answer7.txt" ]; then
 				cat $ANSWER/answer7.txt | base64 -d > $HOME/challenge/unit3/jp/hoge/hogehoge/answer7.txt
 			else
-				if [ "`cat $ANSWER/answer7.txt`" != "`cat $HOME/challenge/unit3/jp/hoge/hogehoge/answer7.txt`" ]; then
+				if [ "`cat $ANSWER/answer7.txt | base64 -d`" != "`cat $HOME/challenge/unit3/jp/hoge/hogehoge/answer7.txt`" ]; then
 					cat $ANSWER/answer7.txt | base64 -d > $HOME/challenge/unit3/jp/hoge/hogehoge/answer7.txt
 				fi
 			fi
@@ -31,7 +31,7 @@ cd_override () {
 				cat $ANSWER/answer11.txt | base64 -d > answer11.txt
 				echo -e '\n answer11.txtが作成されました\n'
 			else
-				if [ "`cat $ANSWER/answer11.txt`" != "`cat answer11.txt`" ]; then
+				if [ "`cat $ANSWER/answer11.txt | base64 -d`" != "`cat answer11.txt`" ]; then
 					cat $ANSWER/answer11.txt | base64 -d > answer11.txt
 					echo -e '\n answer11.txtが作成されました\n'
 				fi
@@ -41,7 +41,7 @@ cd_override () {
 				cat $ANSWER/answer5.txt | base64 -d > answer5.txt
 				echo -e '\n answer5.txtが作成されました\n'
 			else
-				if [ "`cat $ANSWER/answer5.txt`" != "`cat answer5.txt`" ]; then
+				if [ "`cat $ANSWER/answer5.txt | base64 -d`" != "`cat answer5.txt`" ]; then
 					cat $ANSWER/answer5.txt | base64 -d > answer5.txt
 					echo -e '\n answer5.txtが作成されました\n'
 				fi
