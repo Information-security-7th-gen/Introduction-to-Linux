@@ -73,6 +73,4 @@ sudo chown root ${base}12/answer12.txt
 
 cp $script_dir/hint.txt ${base}13/hint.txt
 touch ${base}13/answer13.txt
-if [ "$1" = "pro" ];then
-	rm -rf $HOME/Introduction-to-Linux
-fi
+rm -rf $HOME/Introduction-to-Linux
