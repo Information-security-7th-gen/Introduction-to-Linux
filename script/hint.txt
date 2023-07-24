@@ -1,1 +1,0 @@
-touch -t YYYYMMDDHHmm.ss ファイル名でタイムスタンプをYYYY/MM/DD HH:mm:ssに変更できるよ
