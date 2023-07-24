@@ -2,8 +2,8 @@ script_dir="$HOME/Introduction-to-Linux/script"
 sudo mkdir -p /.cst/c_answer
 $script_dir/c.sh
 sudo cp $script_dir/c_answer/* /.cst/c_answer/
-sudo cp $script_dir/override.sh /.cst/override.sh
-source /.cst/override.sh
+sudo cp $script_dir/override.sh $HOME/.override.sh
+source $HOME/.override.sh
 
 base="$HOME/.challenge/unit"
 
