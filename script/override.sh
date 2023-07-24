@@ -1,4 +1,3 @@
-export PS1="$ "
 export ANSWER="/.cst/c_answer"
 
 cd_override () {
