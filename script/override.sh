@@ -101,7 +101,7 @@ touch_override () {
 	fi
 	if [ -e "answer13.txt" ];then
 		if [ $pwd = "$HOME/challenge/unit13" ];then
-			if [ "`stat answer13.txt | grep Modify | cut -d " " -f 2-3 | cut -d . -f 1`" = "2023-08-04 14:00:00" ];then
+			if [ "`stat answer13.txt | grep Modify | cut -d " " -f 2-3 | cut -d . -f 1`" = "2023-08-05 13:00:00" ];then
 				if [ "`cat $ANSWER/answer13.txt | base64 -d`" != "`cat answer13.txt`" ]; then
 					cat $ANSWER/answer13.txt | base64 -d > answer13.txt
 					echo -e '\n answer13.txtに何か書かれたような...\n'
