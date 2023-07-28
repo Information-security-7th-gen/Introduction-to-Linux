@@ -1,1 +1,1 @@
-su_do
+super_user_power
