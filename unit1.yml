@@ -1,0 +1,8 @@
+name: unit1
+category: challenge
+description: unit1ディレクトリに移動してみよう
+value: 100
+type: standard
+
+flags:
+    - this_is_tutorial

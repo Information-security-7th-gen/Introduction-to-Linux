@@ -1,0 +1,14 @@
+name: unit2
+category: challenge
+description: unit2ディレクトリで空のファイル"answer2.txt"を作成してみよう
+value: 100
+type: standard
+
+flags:
+    - answer_say_touch_me
+
+hints:
+    - touch <ファイル名>で空のファイルを作成できます
+
+requirements:
+    - "unit1"

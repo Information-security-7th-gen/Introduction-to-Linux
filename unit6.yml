@@ -1,0 +1,15 @@
+name: unit6
+category: challenge
+description: unit6ディレクトリでテキストエディタを使ってdate.txtに今日の日付をYYYY/MM/DD形式で書いてみよう
+value: 100
+type: standard
+
+flags:
+    - vim_is_the_best_text_editor
+
+hints:
+    - "YYYYは西暦、MMは月、DDは日です ex. 2020/01/01"
+    - vimでテキストエディタを起動できます
+
+requirements:
+    - "unit1"

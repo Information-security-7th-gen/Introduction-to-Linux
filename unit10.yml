@@ -1,0 +1,14 @@
+name: unit10
+category: challenge
+description: unit10/tmpディレクトリにある".tmp"がついているファイルをすべて消したあとtmpディレクトリを消そう
+value: 100
+type: standard
+
+flags:
+    - dont_remove_answer
+
+hints:
+    - rmdir <ディレクトリ名>でディレクトリを削除できます
+
+requirements:
+    - "unit1"

@@ -1,0 +1,14 @@
+name: unit8
+category: challenge
+description: unit8ディレクトリの中から"answer8.txt"を探そう
+value: 100
+type: standard
+
+flags:
+    - where_is_my_answer
+
+hints:
+    - find -name <ファイル名>でファイル名を検索できます
+
+requirements:
+    - "unit1"

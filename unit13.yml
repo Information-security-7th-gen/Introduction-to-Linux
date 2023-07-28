@@ -1,0 +1,14 @@
+name: unit13
+category: challenge
+description: unit13ディレクトリにある"answer13.txt"のタイムスタンプを"2023/8/5 13:00:00"に変更してみよう
+value: 100
+type: standard
+
+flags:
+    - touch_option
+
+hints:
+    - touch -t YYYYMMDDHHmm.ssでファイル名でタイムスタンプをYYYY/MM/DD HH:mm:ssに変更できます
+
+requirements:
+    - "unit1"

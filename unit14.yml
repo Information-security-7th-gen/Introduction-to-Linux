@@ -1,0 +1,14 @@
+name: unit14
+category: challenge
+description: unit14ディレクトリに"answer"ディレクトリを作成する。unit1からunit4の答えを"answer"ディレクトリにそのままの名前でコピーする。さらに"answer"ディレクトリに"answer14.txt"を作成しよう
+value: 100
+type: standard
+
+flags:
+    - is_this_easy
+
+hints:
+    - 近くの高専生に聞いてみよう
+
+requirements:
+    - "unit1"

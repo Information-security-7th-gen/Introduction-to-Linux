@@ -1,0 +1,15 @@
+name: unit7
+category: challenge
+description: unit7ディレクトリの"colors.txt"から"answer7.txt"の場所を探そう
+value: 100
+type: standard
+
+flags:
+    - hoge_hoge_hogera
+
+hints:
+    - これまでの答えのファイルの名前を元に検索してみよう
+    - ファイルをlessコマンドで表示して"/検索したい文字列"で検索できます
+
+requirements:
+    - "unit1"

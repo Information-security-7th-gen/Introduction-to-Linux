@@ -1,0 +1,14 @@
+name: unit5
+category: challenge
+description: unit5で"answer"ディレクトリを作成して、"answer"ディレクトリに移動してみよう
+value: 100
+type: standard
+
+flags:
+    - i_am_parent_of_answer
+
+hints:
+    - mkdir <ディレクトリ名>でディレクトリを作成できます
+
+requirements:
+    - "unit1"

@@ -1,0 +1,14 @@
+name: unit4
+category: challenge
+description: unit4ディレクトリにある"answer4.txt.tmp"の名前を"answer4.txt"に変更しよう
+value: 100
+type: standard
+
+flags:
+    - thank_you_rename_me
+
+hints:
+    - mv <変更前の名前> <変更後の名前>でファイル名を変更できます
+
+requirements:
+    - "unit1"

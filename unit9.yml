@@ -1,0 +1,14 @@
+name: unit9
+category: challenge
+description: unit9ディレクトリにある"answer9.txt"を消そう
+value: 100
+type: standard
+
+flags:
+    - this_is_real_answer
+
+hints:
+    - rm <ファイル名>でファイルを消せます
+
+requirements:
+    - "unit1"

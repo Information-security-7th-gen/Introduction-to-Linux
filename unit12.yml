@@ -1,0 +1,14 @@
+name: unit12
+category: challenge
+description: unit12ディレクトリにある"answer12.txt"を開こう
+value: 100
+type: standard
+
+flags:
+    - super_user_power
+
+hints:
+    - sudo <コマンド>でコマンドの権限が上がります
+
+requirements:
+    - "unit1"

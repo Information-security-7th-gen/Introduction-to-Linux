@@ -1,0 +1,14 @@
+name: unit3
+category: challenge
+description: unit3ディレクトリで"cd jp/hogera/../fuga/../../en/foo/bar"を実行してカレントディレクトリを確認してみよう
+value: 100
+type: standard
+
+flags:
+    - print_working_directory
+
+hints:
+    - pwdでカレントディレクトリを確認できます
+
+requirements:
+    - "unit1"
