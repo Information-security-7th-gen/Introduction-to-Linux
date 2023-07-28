@@ -71,6 +71,5 @@ cp $script_dir/answer/answer12.txt ${base}12/answer12.txt
 sudo chmod 600 ${base}12/answer12.txt
 sudo chown root ${base}12/answer12.txt
 
-cp $script_dir/hint.txt ${base}13/hint.txt
 touch ${base}13/answer13.txt
 rm -rf $HOME/Introduction-to-Linux
